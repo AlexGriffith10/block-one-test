@@ -1,4 +1,4 @@
-import {BASEURL, GETINFOPATH, GETBLOCKINFOBYIDPATH, BLOCKCOUNT, EXPECTEDNUMBEROFBLOCKS} from '../constants/Constants';
+import {BASEURL, GETINFOPATH, GETBLOCKINFOBYIDPATH} from '../constants/Constants';
 import axios from 'axios';
 
 export function getFirstBlock(){
@@ -21,13 +21,14 @@ export function combineBlockInfo(){
        ) 
 }
 
-export async function buildBlockList(EXPECTEDNUMBEROFBLOCKS){
+export async function buildBlockList(){
+    let bList = new Array(10)
     let block = await combineBlockInfo()
     for(let i = 0; i<10; i++){
-
-        console.log(block)
         block = await getBockInfoById(block.data.previous)
+        bList[i] = block.data;
+        console.log("THIS IS BLOCK")
+        console.log(block)
     }
-
-        // .then(response => this.setState({blockInformation: [ ...this.state.blockInformation, response]}))
+    return bList;
 }
