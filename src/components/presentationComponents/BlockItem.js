@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 export default class BlockItem extends Component {
     render() {
-        console.log("item state info " + this.props.blockInformation);
-    const {id, timeStamp, actionCountForBlock} = this.props.blockInformation
+    const {head_block_id, head_block_time, fork_db_block_num} = this.props.blockInformation
     return (
         <div>
-            <p>{id}</p>
-            <p>{timeStamp}</p>
-            <p>{actionCountForBlock}</p>
+            <p>{head_block_id}</p>
+            <p>{head_block_time}</p>
+            <p>{fork_db_block_num}</p>
         </div>
     )
     }

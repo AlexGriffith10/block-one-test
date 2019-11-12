@@ -9,7 +9,6 @@ class BlockContainer extends Component {
         console.log(this.props)
     }
     render() {
-        console.log(this.props.blockInformation)
         return this.props.blockInformation.map(blockInformation => (<BlockItem key={blockInformation.head_block_id} 
             blockInformation = {blockInformation} />
             )
