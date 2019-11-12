@@ -3,8 +3,8 @@ import Header from './components/layouts/Header';
 import LoadButtonContainer from './components/containerComponents/LoadButtonContainer'
 import BlockContainer from './components/containerComponents/BlockContainer';
 import axios from 'axios';
-import getBlocks from './api/ApiCalls'
 import './App.css';
+import { BASEURL } from './constants/Constants';
 
 class App extends Component {
   state = {
@@ -12,26 +12,27 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('https://api.eosnewyork.io/v1/chain/get_info')
+    axios.get(BASEURL + 'get_info')
     .then(response => {
-      console.log(response.data);
-      this.setState({blockInformation: response.data});
+      this.setState({blockInformation: [response.data]});
     }).then(console.log('this is my state ' + this.state))
   }
 
-  // getBlocks = () => {
-  //   axios.get('https://api.eosnewyork.io/v1/chain/get_info')
-  //   .then(response => this.setState({blockInformation: [...this.state.blockInformation, response.data]}))
-  //   console.log("new state is " + this.state)
-  // }
+  getNewBlocks = () => {
+    axios.get(BASEURL + 'get_info')
+    .then(response => {
+      console.log(response.data);
+      this.setState({blockInformation: [response.data]});
+    }).then(console.log('this is my NEW state ' + this.state))
+  }
 
   render(){
     return (
       <div className="App">
         <div className = "Container">
           <Header />
-          {/* <BlockContainer blockInformation = {this.state.blockInformation}/> */}
-          <LoadButtonContainer onClick = {getBlocks}/>
+          <BlockContainer blockInformation = {this.state.blockInformation}/>
+          <LoadButtonContainer newBlocks = {this.getNewBlocks}/>
         </div>
       </div>
     );
