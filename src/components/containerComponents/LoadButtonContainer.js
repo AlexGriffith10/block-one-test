@@ -7,8 +7,8 @@ import {BASEURL} from '../../constants/Constants'
 export class LoadButtonContainer extends Component {
 
     render() {
-        console.log(this.props.newBlocks)
-        return <Button  newBlocks = {this.props.newBlocks} onClick = {this.props.newBlocks.bind(this)}/>
+        return <Button newBlocks = {this.props.newBlocks} 
+        onClick = {this.props.newBlocks.bind(this)}/>
     }
 }
 

@@ -4,7 +4,8 @@ import LoadButtonContainer from './components/containerComponents/LoadButtonCont
 import BlockContainer from './components/containerComponents/BlockContainer';
 import axios from 'axios';
 import './App.css';
-import { BASEURL } from './constants/Constants';
+import { BASEURL, BLOCKCOUNT, BLOCKLIST } from './constants/Constants';
+import { combineBlockInfo, buildBlockList} from './services/EosService'
 
 class App extends Component {
   state = {
@@ -19,12 +20,14 @@ class App extends Component {
   }
 
   getNewBlocks = () => {
-    axios.get(BASEURL + 'get_info')
-    .then(response => {
-      console.log(response.data);
-      this.setState({blockInformation: [response.data]});
-    }).then(console.log('this is my NEW state ' + this.state))
+    console.log(this.state)
   }
+
+  // buildBlockList = (EXPECTEDNUMBEROFBLOCKS) => {
+  //     console.log("running")
+  //       combineBlockInfo()
+  //       .then(response => this.setState({blockInformation: [ ...this.state.blockInformation, response]}))
+  // }
 
   render(){
     return (
@@ -32,7 +35,8 @@ class App extends Component {
         <div className = "Container">
           <Header />
           <BlockContainer blockInformation = {this.state.blockInformation}/>
-          <LoadButtonContainer newBlocks = {this.getNewBlocks}/>
+          <LoadButtonContainer blockInformation={this.state.blockInformation} newBlocks = {buildBlockList}/>
+          <button onClick = {this.getNewBlocks}>Check state</button>
         </div>
       </div>
     );
