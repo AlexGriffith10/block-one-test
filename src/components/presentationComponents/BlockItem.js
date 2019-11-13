@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 export default class BlockItem extends Component {
     render() {
         console.log('#######')
-        console.log(this.props.newBlock)
+        console.log(this.props.newBlock.id)
     return (
         <div>
-            <p>{this.props.newBlock.data.id}</p>
-            <p>{this.props.newBlock.data.timeStamp}</p>
-            <p>{this.props.newBlock.data.transactions}</p>
+            <p>{this.props.newBlock.id}</p>
+            <p>{this.props.newBlock.timeStamp}</p>
+            <p>{this.props.newBlock.transactions}</p>
         </div>
     )
     }

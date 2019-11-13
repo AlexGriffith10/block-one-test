@@ -28,7 +28,7 @@ export async function buildBlockList(){
         block = await getBockInfoById(block.data.previous)
         bList[i] = block.data;
         console.log("THIS IS BLOCK")
-        console.log(block)
+        console.log(bList)
     }
     return bList;
 }
