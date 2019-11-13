@@ -1,10 +1,10 @@
 import React from 'react'
-import {HEADERTITLE} from '../../constants/Constants';
+import {HEADER_TITLE} from '../../constants/Constants';
 
 function Header() {
     return (
         <div>
-            <h1>{HEADERTITLE}</h1>
+            <h1>{HEADER_TITLE}</h1>
         </div>
     )
 }

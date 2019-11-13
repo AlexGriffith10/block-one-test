@@ -16,5 +16,5 @@ export default class BlockItem extends Component {
 }
 
 BlockItem.propTypes = {
-    blockInformation: PropTypes.object.isRequired
+    newBlock: PropTypes.object.isRequired
 }

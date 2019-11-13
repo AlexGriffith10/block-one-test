@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import EosService from '../../services/new.service'
+import EosService from '../../services/Eos.service'
 import BlockContainer from './BlockContainer'
+import Button from '../presentationComponents/Button'
 
-export class BlockListContainer extends Component {
+export default class BlockListContainer extends Component {
 
     constructor(props) {
         super(props);
@@ -30,11 +31,9 @@ export class BlockListContainer extends Component {
         return (
             <div>
                 <BlockContainer allBlocks = {this.state.allBlocks}/>
-                <button onClick={(e) => {this.getBlocks()}}>New Button</button>
-                <button onClick = {this.getNewBlocks}>Check state</button>
+                <Button onClick={(e) => {this.getBlocks()}}/>
             </div>
         )
     }
 }
 
-export default BlockListContainer

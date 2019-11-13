@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import BlockItem from '../presentationComponents/BlockItem'
+import PropTypes from 'prop-types'
 
-class BlockContainer extends Component {
+export default class BlockContainer extends Component {
     constructor(props) {
         super(props);
         this.state= {
@@ -16,4 +17,6 @@ class BlockContainer extends Component {
     }
 }
 
-export default BlockContainer
+BlockContainer.propTypes = {
+    allBlocks: PropTypes.array.isRequired
+}
