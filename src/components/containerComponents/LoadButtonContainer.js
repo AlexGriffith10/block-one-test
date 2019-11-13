@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../presentationComponents/Button';
-import buildRequest from '../../services/EosService'
+import buildRequest from '../../services/eos.service.'
 import axios from 'axios';
 import {BASEURL} from '../../constants/Constants'
 
