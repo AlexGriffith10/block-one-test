@@ -3,6 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `docker-compose up`
+
+This will spin up the app at port 3000. If you have node on your local machine you can start it using the following method. 
 
 ### `npm start`
 
@@ -16,6 +19,8 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+If the tests are only running for tests that have been updated you can run `npm test ./*` to force it to run all of the tests. 
 
 ### `npm run build`
 
