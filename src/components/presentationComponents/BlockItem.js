@@ -5,16 +5,26 @@ export default class BlockItem extends Component {
     
     render() {
     return (
-        <div>
-            <button data-toggle="collapse" data-target={`#${this.props.newBlock.id}`}>
-                <p>Block ID{this.props.newBlock.id}</p>
-                <p>Block timestamp{this.props.newBlock.timestamp}</p>
-                <p>Block Action Count{this.props.newBlock.transactions.length}</p> </button>
-            <div id={`${this.props.newBlock.id}`} className="collapse">
-            <p>Full Output</p>
-            <div>{this.props.allInfo}</div>
-            </div>
-        </div>
+
+        <div className="accordion" id="accordionExample">
+  <div className="card">
+    <div className="card-header" id="headingOne">
+      <h5 className="mb-0">
+        <button className="btn btn-link" type="button" data-toggle="collapse" data-target={'#'+this.props.newBlock.id} aria-expanded="true" aria-controls="collapseOne">
+          Block ID: {this.props.newBlock.id}
+          Block Timestamp: {this.props.newBlock.timestamp}
+          Block Action Count: {this.props.newBlock.transactions.length}
+        </button>
+      </h5>
+    </div>
+
+    <div id={this.props.newBlock.id} className="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div className="card-body">
+       {this.props.allInfo}
+      </div>
+    </div>
+  </div>
+  </div>
     )
     }
 }

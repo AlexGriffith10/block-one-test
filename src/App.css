@@ -17,6 +17,13 @@
   color: white;
 }
 
+.App-header-style{
+  background: '#333';
+  color: '#fff';
+  textAlign: 'center';
+  padding: '10px';
+}
+
 .App-link {
   color: #09d3ac;
 }
