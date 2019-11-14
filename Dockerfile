@@ -13,6 +13,8 @@ RUN npm install --silent
 RUN npm install react-scripts@3.0.1 -g --silent
 RUN npm install axios
 RUN yarn add --dev react-test-renderer
+RUN npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer
+RUN npm install react-bootstrap bootstrap
 
 # start app
 CMD ["npm", "start"]

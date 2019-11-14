@@ -5,7 +5,7 @@ export default class Button extends Component{
     render(){
     return (
         <div>
-            <button onClick = {this.props.onClick}>{LOAD}</button>
+            <button className= "btn btn-primary" onClick = {this.props.onClick}>{LOAD}</button>
         </div>
     )
     }

@@ -2,14 +2,18 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types';
 
 export default class BlockItem extends Component {
+    
     render() {
-        console.log('#######HERE')
-        console.log(this.props.newBlock)
     return (
         <div>
-            <p>{this.props.newBlock.id}</p>
-            <p>{this.props.newBlock.timestamp}</p>
-            <p>{this.props.newBlock.transactions.length}</p>
+            <button data-toggle="collapse" data-target={`#${this.props.newBlock.id}`}>
+                <p>Block ID{this.props.newBlock.id}</p>
+                <p>Block timestamp{this.props.newBlock.timestamp}</p>
+                <p>Block Action Count{this.props.newBlock.transactions.length}</p> </button>
+            <div id={`${this.props.newBlock.id}`} className="collapse">
+            <p>Full Output</p>
+            <div>{this.props.allInfo}</div>
+            </div>
         </div>
     )
     }

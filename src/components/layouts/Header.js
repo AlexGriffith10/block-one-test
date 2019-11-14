@@ -4,7 +4,7 @@ import {HEADER_TITLE} from '../../constants/Constants';
 function Header() {
     return (
         <div>
-            <h1>{HEADER_TITLE}</h1>
+            <header >{HEADER_TITLE}</header>
         </div>
     )
 }

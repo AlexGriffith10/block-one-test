@@ -14,18 +14,11 @@ export default class BlockListContainer extends Component {
 
     getBlocks(){
         EosService.getAllBlocks(this)
-        console.log('This is component state')
-        console.log(this.state)
     }
 
     getAllBlocks(blocks){
-        console.log("GOT TO ALLBLOCKS");
         this.setState({allBlocks: blocks})
     }
-
-    getNewBlocks = () => {
-        console.log(this.state)
-      }
 
     render() {
         return (
