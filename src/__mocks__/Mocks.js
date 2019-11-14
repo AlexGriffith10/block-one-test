@@ -1,3 +1,6 @@
+import React from 'react';
+import Enzyme from 'enzyme'
+
 export const dummyProps = [
     {id: 1, timestamp: '05:00', previous: 0, transactions: [1,2,3]},
     {id: 2, timestamp: '05:00', previous: 1, transactions: [1,2,3]},

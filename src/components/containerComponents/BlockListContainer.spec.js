@@ -1,7 +1,8 @@
 import React from  'react';
-import {shallow} from 'enzyme';
+import Enzyme, {shallow} from 'enzyme';
+import renderer from 'react-test-renderer';
 import BlockListContainer from './BlockListContainer';
-import {dummyProps} from '../../mocks/Mocks'
+import {dummyProps} from '../../__mocks__/Mocks'
 
 describe("Button Presentation Component", () => {
     test("renders component", () => {
@@ -9,5 +10,14 @@ describe("Button Presentation Component", () => {
         wrapper.setProps({allBlocks: dummyProps})
 
         expect(wrapper.exists()).toBe(true)
+        expect(wrapper.find("Button")).toHaveLength(1)
+    })
+})
+
+describe("snapshot test", () => {
+    test("check snapshot against component", () => {
+        const wrapper = shallow(<BlockListContainer allBlocks={dummyProps} />);
+
+        expect(wrapper).toMatchSnapshot();
     })
 })
