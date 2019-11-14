@@ -6,6 +6,7 @@ In the project directory, you can run:
 ### `docker-compose up`
 
 This is the prefered method as all the dependencies will be included<br />
+This does however require that you have docker on your local machine<br />
 This will spin up the app at port 3000. If you have node on your local machine you can start it using the following method. 
 
 ### `To Run locally outside of a container`
