@@ -16,10 +16,6 @@ export default class BlockListContainer extends Component {
         EosService.getAllBlocks(this)
     }
 
-    getAllBlocks(blocks){
-        this.setState({allBlocks: blocks})
-    }
-
     render() {
         return (
             <div>
