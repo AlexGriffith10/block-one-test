@@ -28,7 +28,8 @@ enzyme using `npm install --save-dev enzyme enzyme-adapter-react-16 react-test-r
 Tests cannot be run in the docker container and must be run locally.<br />
 `npm test` can also be used to run tests but may only run tests files that have been changed.<br />
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.<br />
+Will need Enzyme for tests enzyme using `npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer`
  
 
 ### `npm run build`
