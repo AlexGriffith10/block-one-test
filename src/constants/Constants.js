@@ -1,5 +1,5 @@
 export const HEADER_TITLE = "10 Most Recent Blocks";
-export const LOAD = "Load";
+export const LOAD = "Click to Load New Blocks";
 export const BASE_URL = 'https://api.eosnewyork.io/v1/chain/'
 export const GET_INFO_PATH = 'get_info';
 export const GET_BLOCK_BY_ID_PATH = 'get_block';
