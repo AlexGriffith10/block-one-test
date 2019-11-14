@@ -7,20 +7,21 @@ In the project directory, you can run:
 
 This will spin up the app at port 3000. If you have node on your local machine you can start it using the following method. 
 
-### `npm start`
+### `To Run locally outside of a container`
 
-Runs the app in the development mode.<br />
+npm start runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm test ./*`
 
+Tests cannot be run in the docker container and must be run locally.<br />
+`npm test` can also be used to run tests but may only run tests files that have been changed.<br />
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-If the tests are only running for tests that have been updated you can run `npm test ./*` to force it to run all of the tests. 
+ 
 
 ### `npm run build`
 
