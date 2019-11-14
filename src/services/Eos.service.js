@@ -27,6 +27,7 @@ const EosService = {
             });
         }
         else {
+            component.setState({loading: false});
             component.setState({allBlocks: allBlocks});
         }
     }
