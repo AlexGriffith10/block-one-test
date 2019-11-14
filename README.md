@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 ### `docker-compose up`
 
+This is the prefered method as all the dependencies will be included<br />
 This will spin up the app at port 3000. If you have node on your local machine you can start it using the following method. 
 
 ### `To Run locally outside of a container`
@@ -13,7 +14,13 @@ npm start runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You will also see any lint errors in the console.<br />
+If you run this locally you will need to download the following dependencies<br /> 
+axios using `npm install axios`<br />
+bootstrap using 'npm install react-bootstrap bootstrap'<br />
+enzyme using `npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer`
+
+
 
 ### `npm test ./*`
 
