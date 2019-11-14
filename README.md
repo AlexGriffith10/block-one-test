@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-###`docker-compose up`
+### `docker-compose up`
 
 This will spin up the app at port 3000. If you have node on your local machine you can start it using the following method. 
 
